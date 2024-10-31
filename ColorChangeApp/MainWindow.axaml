@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ColorChangeApp.MainWindow"
+        Width="600" Height="400"
+        MinWidth="300" MinHeight="300"
+        Title="Color Change App">
+    <Grid>
+        <!-- Настройка столбцов -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" /> <!-- Левая колонка с кнопками -->
+            <ColumnDefinition Width="0.1*" /> <!-- GridSplitter -->
+            <ColumnDefinition Width="2*" /> <!-- Прямоугольник -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Прокручиваемая панель кнопок слева -->
+        <ScrollViewer Grid.Column="0" Margin="10">
+            <StackPanel Spacing="5">
+                <!-- Кнопки с цветами -->
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="Khaki" Background="Khaki" Name="KhakiButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="Red" Background="Red" Name="RedButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="MediumVioletRed" Background="MediumVioletRed" Name="MediumVioletRedButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="Bisque" Background="Bisque" Name="BisqueButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="LemonChiffon" Background="LemonChiffon" Name="LemonChiffonButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="PowderBlue" Background="PowderBlue" Name="PowderBlueButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="MintCream" Background="MintCream" Name="MintCreamButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="Maroon" Background="Maroon" Name="MaroonButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="RosyBrown" Background="RosyBrown" Name="RosyBrownButton"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Button Content="LightPink" Background="LightPink" Name="LightPinkButton"/>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- GridSplitter между кнопками и прямоугольником -->
+        <GridSplitter Grid.Column="1" Width="5" Background="Black" HorizontalAlignment="Center" />
+
+        <!-- Цветной прямоугольник справа -->
+        <Border Grid.Column="2" x:Name="ColorDisplay" Background="Khaki" Margin="10"/>
+    </Grid>
+</Window>
